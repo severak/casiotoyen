@@ -81,6 +81,8 @@
                              translation="fixed_value" translationValue="0"/>
                     <binding type="effect" level="instrument" position="8" parameter="FX_REVERB_WET_LEVEL"
                              translation="fixed_value" translationValue="0"/>
+                    <binding type="effect" level="instrument" position="9" parameter="FX_MIX"
+                             translation="fixed_value" translationValue="0"/>
                 </option>
                 <option name="Slapback">
                     <binding type="effect" level="instrument" position="4" parameter="FX_WET_LEVEL"
@@ -101,6 +103,10 @@
                 <option name="Warehouse">
                     <binding type="effect" level="instrument" position="8" parameter="FX_REVERB_WET_LEVEL"
                              translation="fixed_value" translationValue="1"/>
+                </option>
+                <option name="Spring">
+                    <binding type="effect" level="instrument" position="9" parameter="FX_MIX"
+                             translation="fixed_value" translationValue="0.5"/>
                 </option>
             </menu>
 
@@ -512,8 +518,8 @@
         <effect type="wave_folder" drive="1" threshold="1"/>
         <!-- 8: warehouse reverb -->
         <effect type="reverb" roomSize="1" damping="0" wetLevel="0"/>
-        <!-- 9: lowpass -->
-        <effect type="lowpass" frequency="22000.0"/>
+        <!-- 9: spring convolution -->
+        <effect type="convolution" mix="0" irFile="samples/ir_pruzina_stagg2.wav" />
         <!-- 10: final gain -->
         <effect type="gain" levelUnit="linear" level="1"/>
     </effects>
