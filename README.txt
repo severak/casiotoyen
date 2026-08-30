@@ -11,6 +11,9 @@
 - Kalimba - Korg Phase 8 (plucked tone)
 - Crystal - Korg Phase 8 (sustained tone)
 - Noise - pitched noise
+- Groan Tube - groan tube
+- Groan Crystal - groan tube with Phase 8 sustained tone
+- Taishogoto - single string of Suzuki taishogoto (with some symphatetic resonance from other strings)
 
 ## Effect
 
@@ -33,9 +36,7 @@
 
 - modwheel -> distortion drive
 - hladký filtr
-- bicí
 - žáby
-- taishogoto
 - ilustrace
 - dokumentace a filozofie
 
