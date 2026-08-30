@@ -62,7 +62,7 @@
                 <option name="Taishogoto">
                     <binding type="general" level="group" parameter="ENABLED" tags="taisho" translation="fixed_value"
                              translationValue="true"/>
-                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,krystal"
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,krystal,klaviphon"
                              translation="fixed_value" translationValue="false"/>
                 </option>
             </menu>
@@ -406,23 +406,23 @@
             <sample loNote="29" hiNote="89" rootNote="77" path="samples/groan_f4_c.wav" seqPosition="3"/>
         </group>
         <group tags="taisho">
-            <sample loNote="55" hiNote="55" rootNote="55" path="samples/taisho_base.wav"/>
-            <sample loNote="67" hiNote="67" rootNote="67" path="samples/taisho_g4.wav"/>
-            <sample loNote="69" hiNote="69" rootNote="69" path="samples/taisho_a4.wav"/>
-            <sample loNote="71" hiNote="71" rootNote="71" path="samples/taisho_h4.wav"/>
-            <sample loNote="72" hiNote="72" rootNote="72" path="samples/taisho_c5.wav"/>
-            <sample loNote="74" hiNote="74" rootNote="74" path="samples/taisho_d5.wav"/>
-            <sample loNote="76" hiNote="76" rootNote="76" path="samples/taisho_e5.wav"/>
-            <sample loNote="77" hiNote="77" rootNote="77" path="samples/taisho_f5.wav"/>
-            <sample loNote="79" hiNote="79" rootNote="79" path="samples/taisho_g5.wav"/>
-            <sample loNote="81" hiNote="81" rootNote="81" path="samples/taisho_a5.wav"/>
-            <sample loNote="83" hiNote="83" rootNote="83" path="samples/taisho_h5.wav"/>
-            <sample loNote="84" hiNote="84" rootNote="84" path="samples/taisho_c6.wav"/>
-            <sample loNote="86" hiNote="86" rootNote="86" path="samples/taisho_d6.wav"/>
-            <sample loNote="88" hiNote="88" rootNote="88" path="samples/taisho_e6.wav"/>
-            <sample loNote="89" hiNote="89" rootNote="89" path="samples/taisho_f6.wav"/>
-            <sample loNote="91" hiNote="91" rootNote="91" path="samples/taisho_g6.wav"/>
-            <sample loNote="93" hiNote="93" rootNote="93" path="samples/taisho_a6.wav"/>
+            <sample loNote="43" hiNote="50" rootNote="43" path="samples/taisho_base.wav"/>
+            <sample loNote="51" hiNote="55" rootNote="55" path="samples/taisho_g4.wav"/>
+            <sample loNote="56" hiNote="57" rootNote="57" path="samples/taisho_a4.wav"/>
+            <sample loNote="58" hiNote="59" rootNote="59" path="samples/taisho_h4.wav"/>
+            <sample loNote="60" hiNote="60" rootNote="60" path="samples/taisho_c5.wav"/>
+            <sample loNote="61" hiNote="62" rootNote="62" path="samples/taisho_d5.wav"/>
+            <sample loNote="63" hiNote="64" rootNote="64" path="samples/taisho_e5.wav"/>
+            <sample loNote="65" hiNote="65" rootNote="65" path="samples/taisho_f5.wav"/>
+            <sample loNote="66" hiNote="67" rootNote="67" path="samples/taisho_g5.wav"/>
+            <sample loNote="68" hiNote="69" rootNote="69" path="samples/taisho_a5.wav"/>
+            <sample loNote="70" hiNote="71" rootNote="71" path="samples/taisho_h5.wav"/>
+            <sample loNote="72" hiNote="72" rootNote="72" path="samples/taisho_c6.wav"/>
+            <sample loNote="73" hiNote="74" rootNote="74" path="samples/taisho_d6.wav"/>
+            <sample loNote="75" hiNote="76" rootNote="76" path="samples/taisho_e6.wav"/>
+            <sample loNote="77" hiNote="77" rootNote="77" path="samples/taisho_f6.wav"/>
+            <sample loNote="78" hiNote="79" rootNote="79" path="samples/taisho_g6.wav"/>
+            <sample loNote="80" hiNote="81" rootNote="81" path="samples/taisho_a6.wav"/>
 
         </group>
     </groups>
