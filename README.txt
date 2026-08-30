@@ -36,6 +36,7 @@
 
 - disable clip když není nastaven?
 - grill reverb
+- určit pořadí modulů
 - hladký filtr
 - žáby
 - ilustrace

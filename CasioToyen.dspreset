@@ -250,7 +250,7 @@
             <labeled-knob x="530" y="20" width="120" height="60" textSize="16" textColor="FF000000"
                           trackForegroundColor="FFCC00FF" trackBackgroundColor="CC000000"
                           label="VOLUME" type="float" minValue="0" maxValue="1" value="0.5" style="linear_bar" tags="volumeslider">
-                <binding type="effect" level="instrument" position="9" parameter="LEVEL"
+                <binding type="effect" level="instrument" position="10" parameter="LEVEL"
                          translation="linear" translationOutputMin="0" translationOutputMax="1"/>
             </labeled-knob>
 
@@ -454,11 +454,11 @@
     <modulators>
         <!-- wow and flutter LFOs -->
         <random mode="periodic" frequency="5" seed="12345" scope="global">
-            <binding type="effect" level="instrument" effectIndex="5" parameter="FX_DELAY_TIME" modBehavior="add"
+            <binding type="effect" level="instrument" effectIndex="6" parameter="FX_DELAY_TIME" modBehavior="add"
                      translation="linear" translationOutputMin="0" translationOutputMax="0.01"/>
         </random>
         <lfo shape="sine" frequency="0.5" modAmount="1.0">
-            <binding type="effect" level="instrument" effectIndex="5" parameter="FX_DELAY_TIME" modBehavior="add"
+            <binding type="effect" level="instrument" effectIndex="6" parameter="FX_DELAY_TIME" modBehavior="add"
                      translation="linear" translationOutputMin="0" translationOutputMax="0.01"/>
         </lfo>
 
