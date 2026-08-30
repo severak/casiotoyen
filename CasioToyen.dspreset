@@ -71,35 +71,35 @@
 
             <menu x="140" y="40" width="120" height="30" requireSelection="true" placeholderText="Effect..." value="1">
                 <option name="None">
-                    <binding type="effect" level="instrument" position="3" parameter="FX_WET_LEVEL"
+                    <binding type="effect" level="instrument" position="4" parameter="FX_WET_LEVEL"
                              translation="fixed_value" translationValue="0"/>
-                    <binding type="effect" level="instrument" position="4" parameter="FX_MIX" translation="fixed_value"
+                    <binding type="effect" level="instrument" position="5" parameter="FX_MIX" translation="fixed_value"
                              translationValue="0"/>
-                    <binding type="effect" level="instrument" position="5" parameter="FX_WET_LEVEL"
+                    <binding type="effect" level="instrument" position="6" parameter="FX_WET_LEVEL"
                              translation="fixed_value" translationValue="0"/>
-                    <binding type="effect" level="instrument" position="6" parameter="FX_DRIVE"
+                    <binding type="effect" level="instrument" position="7" parameter="FX_DRIVE"
                              translation="fixed_value" translationValue="0"/>
-                    <binding type="effect" level="instrument" position="7" parameter="FX_REVERB_WET_LEVEL"
+                    <binding type="effect" level="instrument" position="8" parameter="FX_REVERB_WET_LEVEL"
                              translation="fixed_value" translationValue="0"/>
                 </option>
                 <option name="Slapback">
-                    <binding type="effect" level="instrument" position="3" parameter="FX_WET_LEVEL"
+                    <binding type="effect" level="instrument" position="4" parameter="FX_WET_LEVEL"
                              translation="fixed_value" translationValue="1"/>
                 </option>
                 <option name="Lofi">
-                    <binding type="effect" level="instrument" position="4" parameter="FX_MIX" translation="fixed_value"
+                    <binding type="effect" level="instrument" position="5" parameter="FX_MIX" translation="fixed_value"
                              translationValue="1"/>
                 </option>
                 <option name="Wow &amp; flutter">
-                    <binding type="effect" level="instrument" position="5" parameter="FX_WET_LEVEL"
+                    <binding type="effect" level="instrument" position="6" parameter="FX_WET_LEVEL"
                              translation="fixed_value" translationValue="1"/>
                 </option>
                 <option name="Foldback">
-                    <binding type="effect" level="instrument" position="6" parameter="FX_DRIVE"
+                    <binding type="effect" level="instrument" position="7" parameter="FX_DRIVE"
                              translation="fixed_value" translationValue="10"/>
                 </option>
                 <option name="Warehouse">
-                    <binding type="effect" level="instrument" position="7" parameter="FX_REVERB_WET_LEVEL"
+                    <binding type="effect" level="instrument" position="8" parameter="FX_REVERB_WET_LEVEL"
                              translation="fixed_value" translationValue="1"/>
                 </option>
             </menu>
@@ -184,6 +184,8 @@
                              parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
                     <binding type="effect" level="instrument" position="2" parameter="FX_WET_LEVEL"
                              translation="fixed_value" translationValue="0"/>
+                    <binding type="modulator" level="instrument" modulatorIndex="5"
+                             parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
                 </option>
                 <option name="Amp">
                     <binding type="modulator" level="instrument" modulatorIndex="2"
@@ -194,6 +196,8 @@
                              parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
                     <binding type="effect" level="instrument" position="2" parameter="FX_WET_LEVEL"
                              translation="fixed_value" translationValue="0"/>
+                    <binding type="modulator" level="instrument" modulatorIndex="5"
+                             parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
                 </option>
 
                 <option name="Time travel">
@@ -205,6 +209,8 @@
                              parameter="MOD_AMOUNT" translation="fixed_value" translationValue="1" />
                     <binding type="effect" level="instrument" position="2" parameter="FX_WET_LEVEL"
                              translation="fixed_value" translationValue="1"/>
+                    <binding type="modulator" level="instrument" modulatorIndex="5"
+                             parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
                 </option>
 
                 <option name="Time warp">
@@ -218,6 +224,25 @@
                              translation="fixed_value" translationValue="1"/>
                     <binding type="effect" level="instrument" position="2" parameter="FX_FEEDBACK"
                              translation="fixed_value" translationValue="0.8"/>
+                    <binding type="modulator" level="instrument" modulatorIndex="5"
+                             parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
+
+
+                </option>
+
+                <option name="Clip">
+                    <binding type="modulator" level="instrument" modulatorIndex="2"
+                             parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
+                    <binding type="modulator" level="instrument" modulatorIndex="3"
+                             parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
+                    <binding type="modulator" level="instrument" modulatorIndex="4"
+                             parameter="MOD_AMOUNT" translation="fixed_value" translationValue="0" />
+                    <binding type="effect" level="instrument" position="2" parameter="FX_WET_LEVEL"
+                             translation="fixed_value" translationValue="0"/>
+                    <binding type="effect" level="instrument" position="2" parameter="FX_FEEDBACK"
+                             translation="fixed_value" translationValue="0"/>
+                    <binding type="modulator" level="instrument" modulatorIndex="5"
+                             parameter="MOD_AMOUNT" translation="fixed_value" translationValue="1" />
                 </option>
 
             </menu>
@@ -455,6 +480,12 @@
                      translation="linear" translationOutputMin="0" translationOutputMax="0.3"/>
         </midiCC>
 
+        <!-- MODWHEEL -> DRIVE -->
+        <midiCC number="1" modAmount="0" scope="global">
+            <binding level="instrument" type="effect" effectIndex="3" parameter="FX_DRIVE"
+                     translation="linear" translationOutputMin="1" translationOutputMax="60"/>
+        </midiCC>
+
         <!-- volume slider -->
         <midiCC number="7" modAmount="1" scope="global">
             <binding level="ui" type="control" parameter="VALUE" tags="volumeslider"
@@ -469,19 +500,21 @@
         <effect type="gain" levelUnit="linear" level="1"/>
         <!-- 2: mod time travel -->
         <effect type="delay" delayTime="0" feedback="0" wetLevel="0"/>
-        <!-- 3: slapback -->
+        <!-- 3: waveshaper -->
+        <effect type="wave_shaper" drive="1" outputLevel="1"/>
+        <!-- 4: slapback -->
         <effect type="delay" delayTime="0.02" feedback="0.95" wetLevel="0"/>
-        <!-- 4: lofi -->
+        <!-- 5: lofi -->
         <effect type="bit_crusher" bitDepth="12" sampleRateReduction="8" mix="0"/>
-        <!-- 5: wow and flutter -->
+        <!-- 6: wow and flutter -->
         <effect type="delay" delayTime="0" feedback="0" wetLevel="0"/>
-        <!-- 6: wavefolder shift -->
+        <!-- 7: foldback -->
         <effect type="wave_folder" drive="1" threshold="1"/>
-        <!-- 7: warehouse reverb -->
+        <!-- 8: warehouse reverb -->
         <effect type="reverb" roomSize="1" damping="0" wetLevel="0"/>
-        <!-- 8: lowpass -->
+        <!-- 9: lowpass -->
         <effect type="lowpass" frequency="22000.0"/>
-        <!-- 9: final gain -->
+        <!-- 10: final gain -->
         <effect type="gain" levelUnit="linear" level="1"/>
     </effects>
 </DecentSampler>

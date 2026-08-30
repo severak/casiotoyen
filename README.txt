@@ -34,7 +34,8 @@
 
 ## todo
 
-- modwheel -> distortion drive
+- disable clip když není nastaven?
+- grill reverb
 - hladký filtr
 - žáby
 - ilustrace
