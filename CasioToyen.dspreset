@@ -10,59 +10,71 @@
                     <binding type="general" level="group" parameter="ENABLED" tags="piano" translation="fixed_value"
                              translationValue="true"/>
                     <binding type="general" level="group" parameter="ENABLED"
-                             tags="saw,melodica,sine,klaviphon,kalimba,krystal,noise,groan,taisho" translation="fixed_value"
+                             tags="saw,melodica,sine,klaviphon,kalimba,krystal,noise,groan,taisho,doobidoobah,aaa" translation="fixed_value"
                              translationValue="false"/>
                 </option>
                 <option name="Klaviphon">
                     <binding type="general" level="group" parameter="ENABLED" tags="klaviphon" translation="fixed_value"
                              translationValue="true"/>
                     <binding type="general" level="group" parameter="ENABLED"
-                             tags="piano,melodica,saw,sine,kalimba,krystal,noise,groan,taisho" translation="fixed_value"
+                             tags="piano,melodica,saw,sine,kalimba,krystal,noise,groan,taisho,doobidoobah,aaa" translation="fixed_value"
                              translationValue="false"/>
                 </option>
                 <option name="Melodica">
                     <binding type="general" level="group" parameter="ENABLED" tags="melodica" translation="fixed_value"
                              translationValue="true"/>
                     <binding type="general" level="group" parameter="ENABLED"
-                             tags="piano,saw,sine,klaviphon,kalimba,krystal,noise,groan,taisho" translation="fixed_value"
+                             tags="piano,saw,sine,klaviphon,kalimba,krystal,noise,groan,taisho,doobidoobah,aaa" translation="fixed_value"
                              translationValue="false"/>
                 </option>
                 <option name="Kalimba">
                     <binding type="general" level="group" parameter="ENABLED" tags="kalimba" translation="fixed_value"
                              translationValue="true"/>
                     <binding type="general" level="group" parameter="ENABLED"
-                             tags="piano,melodica,saw,sine,krystal,noise,groan,taisho" translation="fixed_value"
+                             tags="piano,melodica,saw,sine,krystal,noise,groan,taisho,doobidoobah,aaa" translation="fixed_value"
                              translationValue="false"/>
                 </option>
                 <option name="Crystal">
                     <binding type="general" level="group" parameter="ENABLED" tags="krystal" translation="fixed_value"
                              translationValue="true"/>
-                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,taisho"
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,taisho,doobidoobah,aaa"
                              translation="fixed_value" translationValue="false"/>
                 </option>
                 <option name="Noise">
                     <binding type="general" level="group" parameter="ENABLED" tags="noise" translation="fixed_value"
                              translationValue="true"/>
-                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,krystal,groan,taisho"
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,krystal,groan,taisho,doobidoobah,aaa"
                              translation="fixed_value" translationValue="false"/>
                 </option>
 
                 <option name="Groan Tube">
                     <binding type="general" level="group" parameter="ENABLED" tags="groan" translation="fixed_value"
                              translationValue="true"/>
-                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,krystal,noise,taisho"
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,krystal,noise,taisho,doobidoobah,aaa"
                              translation="fixed_value" translationValue="false"/>
                 </option>
                 <option name="Groan Crystal">
                     <binding type="general" level="group" parameter="ENABLED" tags="groan,krystal" translation="fixed_value"
                              translationValue="true"/>
-                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,taisho"
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,taisho,doobidoobah,aaa"
                              translation="fixed_value" translationValue="false"/>
                 </option>
                 <option name="Taishogoto">
                     <binding type="general" level="group" parameter="ENABLED" tags="taisho" translation="fixed_value"
                              translationValue="true"/>
-                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,krystal,klaviphon"
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,krystal,klaviphon,doobidoobah,aaa"
+                             translation="fixed_value" translationValue="false"/>
+                </option>
+                <option name="Doo Bee Doo Bah">
+                    <binding type="general" level="group" parameter="ENABLED" tags="doobidoobah" translation="fixed_value"
+                             translationValue="true"/>
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,krystal,klaviphon,taisho,aaa"
+                             translation="fixed_value" translationValue="false"/>
+                </option>
+                <option name="Aaa">
+                    <binding type="general" level="group" parameter="ENABLED" tags="aaa" translation="fixed_value"
+                             translationValue="true"/>
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,krystal,klaviphon,taisho,doobidoobah"
                              translation="fixed_value" translationValue="false"/>
                 </option>
             </menu>
@@ -455,6 +467,15 @@
             <sample loNote="78" hiNote="79" rootNote="79" path="samples/taisho_g6.wav"/>
             <sample loNote="80" hiNote="81" rootNote="81" path="samples/taisho_a6.wav"/>
 
+        </group>
+        <group tags="doobidoobah" seqMode="round_robin">
+            <sample loNote="29" hiNote="89" rootNote="57" path="samples/doo.wav" seqPosition="1"/>
+            <sample loNote="29" hiNote="89" rootNote="57" path="samples/bee.wav" seqPosition="2"/>
+            <sample loNote="29" hiNote="89" rootNote="57" path="samples/doo2.wav" seqPosition="3"/>
+            <sample loNote="29" hiNote="89" rootNote="57" path="samples/bah.wav" seqPosition="4"/>
+        </group>
+        <group tags="aaa">
+            <sample loNote="29" hiNote="89" rootNote="57" path="samples/aaa_loop_zacatek.wav"/>
         </group>
     </groups>
     <modulators>
