@@ -77,6 +77,12 @@
                     <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,krystal,klaviphon,taisho,doobidoobah"
                              translation="fixed_value" translationValue="false"/>
                 </option>
+                <option name="tAAAisho">
+                    <binding type="general" level="group" parameter="ENABLED" tags="aaa,taisho" translation="fixed_value"
+                             translationValue="true"/>
+                    <binding type="general" level="group" parameter="ENABLED" tags="piano,melodica,saw,sine,noise,groan,krystal,klaviphon,doobidoobah"
+                             translation="fixed_value" translationValue="false"/>
+                </option>
             </menu>
 
             <label x="140" y="10" height="30" width="120" text="EFFECT" textSize="16"/>
